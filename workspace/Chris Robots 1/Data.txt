@@ -1,0 +1,2 @@
+amount of bombs - 13
+does this work?

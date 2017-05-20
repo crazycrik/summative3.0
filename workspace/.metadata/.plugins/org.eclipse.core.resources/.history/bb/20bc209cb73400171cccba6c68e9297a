@@ -1,0 +1,120 @@
+import java.applet.*;
+import java.awt.*;
+
+public class SpaceCraftGame extends Applet implements Runnable{
+  // variables
+  private Thread th;
+  //create a new space craft
+  // create an array of shots
+  
+  // speed constants shot speed leftspedd right speed
+
+  
+  // move  flags for left and right for teh spacecraft
+  private boolean playerMoveLeft;
+  private boolean playerMoveRight;
+  
+  
+  
+  // double buffering
+  private Image dbImage;
+  private Graphics dbg;
+  
+  public void init(){
+
+    setBackground (Color.white);
+    //set the psostion of the new space craft
+    //initailze the array of shots
+ 
+  }
+  
+  public void start ()  {
+    th = new Thread(this);
+    th.start ();
+  }
+  
+  public void stop()  {
+    th.stop();
+  }
+  
+  public void destroy()  {
+    th.stop();
+  }
+  
+  public void run ()  {
+    Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
+    
+    //as long as array shot is not empty 
+    //move the shot forward
+    //test if teh shot passed teh top of the fram
+    //remove from array
+      
+      
+      // move spacecraft left and right
+      
+      
+      // repaint applet
+      repaint();
+      
+      try      {
+        Thread.sleep(10);
+      }
+      catch (InterruptedException ex)      {
+        // do nothing
+      }
+      
+      Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
+    }
+  
+  
+  public boolean keyDown(Event e, int key)  {
+    
+   
+    if(key == Event.LEFT)    {
+      
+    }    else if(key == Event.RIGHT)    {
+      
+    }    else if(key == 32)  //space bar
+    {
+      // generate new shot and add it to shots array
+      
+    }
+    
+    return true;
+  }
+  
+  public boolean keyUp(Event e, int key)  {
+    if(key == Event.LEFT)    {
+    
+    }
+    else if(key == Event.RIGHT)    {
+      
+    }
+    
+    return true;
+  }
+  
+  
+  public void update (Graphics g)  {
+    if (dbImage == null)    {
+      dbImage = createImage (this.getSize().width, this.getSize().height);
+      dbg = dbImage.getGraphics ();
+    }
+    
+    dbg.setColor (getBackground ());
+    dbg.fillRect (0, 0, this.getSize().width, this.getSize().height);
+    
+    dbg.setColor (getForeground());
+    paint (dbg);
+    
+    g.drawImage (dbImage, 0, 0, this);
+  }
+  
+  public void paint (Graphics g)  {
+    // draw player
+   
+    
+    // draw shots
+ 
+  }
+}

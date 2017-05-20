@@ -1,0 +1,42 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+
+public class Shot {
+	//Variables
+	private Graphics graph;
+	private int x_pos, y_pos;
+	
+	
+	public Shot(int x, int y) {
+		x_pos = x;
+		y_pos = y;
+	}
+	public Rectangle hitBox = new Rectangle(x_pos,y_pos,10,10);
+
+	//Methods  
+	//moveShot
+	public void moveShot(int y){
+		y_pos+=y; 	
+
+	}
+	//getY
+	public int getYPos(){
+		return y_pos;
+	}
+	//getX
+	public int getXPos() {
+		return x_pos;
+	}
+
+	public void drawShot(Graphics g){
+		g.setColor(Color.black);
+		g.fillOval(x_pos, y_pos, 10, 10);
+	}
+	public boolean checkInter(Rectangle r){
+		hitBox.x = getXPos();
+		hitBox.y = getYPos();
+		return r.intersects(hitBox);
+	}//end method
+
+}//end class

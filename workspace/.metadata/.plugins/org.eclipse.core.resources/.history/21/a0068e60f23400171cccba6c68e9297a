@@ -1,0 +1,34 @@
+
+/*
+import java.awt.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+
+import sun.audio.*
+
+
+public class Sound{
+
+	String shotSound = "laser_sound2.wav";   //Shot sound
+	InputStream in;
+	AudioStream as;
+
+	public void Sound() {
+		try {
+			in = new FileInputStream(shotSound);//Sound when ship shoots
+			//… add other input streams here 
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		try {
+			as = new AudioStream(in);
+			// … add other Audio streams here 
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+*/
