@@ -1,10 +1,11 @@
 
 public class rooms {
-	private int roomID = 0;
+	private int roomID = 0; 
 	private int roomLevel = 1;
-	private boolean subSystem = false;
+	private boolean subSystem = false; //some variables 
 	private int maxLevel = 0;
 	private playerShip parentShip; 
+	private int oxygenLevel = 100;
 	
 	public rooms(int id, int level, boolean sub, playerShip pSh){
 		roomID = id;
@@ -14,10 +15,10 @@ public class rooms {
 		initRoom(id);//make the room
 		//github test
 	}//end const
-	
+
 	public void initRoom(int rmId){
 		// options are - pilot, engines, oxygen, weapons, shields, medbay and empty
-		
+
 		if(rmId == 0){
 			//room is empty, do nothing
 			//todo - graphics - empty room
@@ -44,8 +45,15 @@ public class rooms {
 			maxLevel = 3;
 		}//end if	
 	}//end method
+
+	public void healCrew(crewMem x){
+		int i = 10 + (roomLevel * 5); //max of 10 + (3*5) which is 25/second in game because of timer
+		if(roomID == 6){//remember if medbay
+			x.heal(i);//heals the crew member in it
+		}//end if
+	}//end method
 	
 	
 	
-	
+
 }//end class
