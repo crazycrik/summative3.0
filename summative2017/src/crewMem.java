@@ -7,7 +7,7 @@ public class crewMem {
 	private int shieldSk = 0; //crew has specific skill levels for diffrent rooms around the ship
 	private int repSk = 0;
 	private int combatSk = 0;
-
+	private int maximHP = 0;
 	private String crewName = "";
 
 	private double damageTakenMP = 1;
@@ -31,6 +31,8 @@ public class crewMem {
 		crewName = name; //constructors
 		crewType = type;
 		crewHP = maxHP;
+		maximHP = maxHP;
+
 		if(type == 0){
 			System.out.println(name + " is a human");
 			//nothing happens, humans are base species. this will also be for graphics
@@ -75,6 +77,15 @@ public class crewMem {
 		if(crewType != 3){
 			takeDamage(1);//fire damage. in almost all cases the (int)(1*damage taken mp) will come out to 1, rocks don't take fire damage
 		}//end if
-		
+
 	}//end method
+
+	public void heal(int healAm){
+		crewHP+=healAm;//heal
+		if(crewHP > maximHP){
+			crewHP = maximHP;
+		}//can't go over max
+	}//end method
+	
+	
 }//end class
