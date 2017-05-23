@@ -1,3 +1,0 @@
-D:\Robots\examples\ch06\counter\CounterBot1.java
-D:\Robots\examples\ch06\counter\CounterBot2.java
-D:\Robots\examples\ch06\counter\CounterMain.java

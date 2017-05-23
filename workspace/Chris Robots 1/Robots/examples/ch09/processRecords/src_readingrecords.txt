@@ -1,2 +1,0 @@
-D:\Robots\ch09\readingRecords\ReadServerRecords.java
-D:\Robots\ch09\readingRecords\ServerRecord.java

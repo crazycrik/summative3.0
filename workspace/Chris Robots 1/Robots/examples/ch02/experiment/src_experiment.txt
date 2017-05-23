@@ -1,3 +1,0 @@
-D:\Robots\examples\extend\experiment\ExperimentRobot.java
-D:\Robots\examples\extend\experiment\Longer.java
-D:\Robots\examples\extend\experiment\Shorter.java

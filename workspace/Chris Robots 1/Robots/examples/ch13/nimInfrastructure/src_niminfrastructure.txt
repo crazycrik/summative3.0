@@ -1,3 +1,0 @@
-D:\Robots\examples\ch13\nimInfrastructure\Nim.java
-D:\Robots\examples\ch13\nimInfrastructure\NimModel.java
-D:\Robots\examples\ch13\nimInfrastructure\NimView.java

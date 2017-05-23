@@ -1,2 +1,0 @@
-D:\JKarelBook\examples\methods\harvestWithSix\HarvestTask.java
-D:\JKarelBook\examples\methods\harvestWithSix\RowHarvester.java

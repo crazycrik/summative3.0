@@ -1,2 +1,0 @@
-D:\Robots\examples\decisions2\lineArt\ArtComponent.java
-D:\Robots\examples\decisions2\lineArt\Main.java

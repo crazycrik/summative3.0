@@ -1,2 +1,0 @@
-D:\Robots\examples\extend\stickFigure\Main.java
-D:\Robots\examples\extend\stickFigure\StickFigure.java

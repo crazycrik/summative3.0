@@ -1,3 +1,0 @@
-D:\Robots\examples\ch02\switchLights\Lamp.java
-D:\Robots\examples\ch02\switchLights\Main.java
-D:\Robots\examples\ch02\switchLights\SwitchBot.java

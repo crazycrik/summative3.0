@@ -1,4 +1,0 @@
-D:\Robots\examples\ch12\dancers2\Dancer.java
-D:\Robots\examples\ch12\dancers2\DancerHall.java
-D:\Robots\examples\ch12\dancers2\LeftDancer.java
-D:\Robots\examples\ch12\dancers2\RightDancer.java
