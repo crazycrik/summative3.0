@@ -12,7 +12,7 @@ public class rooms {
 		subSystem = sub;
 		parentShip = pSh;
 		initRoom(id);//make the room
-		
+		//github test
 	}//end const
 	
 	public void initRoom(int rmId){
