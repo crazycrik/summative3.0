@@ -1,3 +1,4 @@
+import java.util.logging.Level;
 
 public class rooms {
 	private int roomID = 0; 
@@ -6,6 +7,7 @@ public class rooms {
 	private int maxLevel = 0;
 	private playerShip parentShip; 
 	private int oxygenLevel = 100;
+	private boolean powered = false;
 	
 	public rooms(int id, int level, boolean sub, playerShip pSh){
 		roomID = id;
@@ -53,7 +55,57 @@ public class rooms {
 		}//end if
 	}//end method
 	
+	public void removeOxygen(){
+		//to do graphics
+		oxygenLevel -= 1; //drop oxygen by 1% each calling of the method
+		//damage is handled outside
+		//this will be called in a timer, so none is nessary here
+	}//end method
 	
+	public boolean Destroy(){
+		//todo graphics
+		powered = false; //
+		return powered;
+	}//end method
 	
+	public int repair(){
+		//it takes 5 seconds per level
+		int timeTaken = 5 * roomLevel; 		
+		return timeTaken; 
+	}//end method
+	
+	public boolean poweredOn(){
+		//todo graphics
+		powered = true;//turn it on
+		return powered;
+	}//end method
+	
+	public boolean powerOff(){
+		//todo diffrent graphics to destroy
+		powered = false;//turn it off without destroying it
+		return powered;
+	}//end method
 
+	public void sheilds(playerShip x, int systemPower){
+		if(roomID == 5){
+			if(systemPower == 0){
+				//graphics
+			}else if(systemPower == 1){
+				//graphics
+			}else if(systemPower == 2){
+				//graphics
+			}else if(systemPower == 3){
+				//graphics
+			}else if(systemPower == 4){
+				//graphics
+			}//end if
+		}//end if
+	}//end method
+	
+	public void checkIfCrewDying(crewMem x, boolean isInRoom){
+		if(isInRoom == true && oxygenLevel < 20){ //if in room and no beathable air
+			x.takeDamage(3);//per hit, will be called in timer
+		}//end if
+	}//end method
+	
 }//end class

@@ -1,20 +1,11 @@
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.*;
 
 /*
  STILL TO DO                          100% needed?
  - actual graphics						yes
  - timer/animations						yes
- - rooms in ships						yes
- - shops								yes
- - more loss conditions					no
  - final boss/win conditions			yes
- - oxygen % kills						yes
- - room oxygen							yes
- - fire damage to crew					yes
  - piolt/engine/evade interaction		yes
- 
  */
 
 
@@ -32,7 +23,7 @@ public class mainGUI {
 
 	playerShip player = new playerShip(fuel, missles, droneParts);
 	static beacon[] sector0 = new beacon[30];   //game objects
-
+	
 
 
 	static JFrame frame = new JFrame("FTL");
@@ -46,7 +37,8 @@ public class mainGUI {
 		frame.setSize(1280, 720); //720p
 		frame.setVisible(true);//shows frame`
 		frame.setLayout(null);//let me control pls
-
+		
+		
 
 		label1.setEnabled(true);
 		label1.setBounds(10, 10, 65, 20);
