@@ -1,3 +1,4 @@
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
 
 public class playerShip {
 	private int health = 30;
@@ -22,6 +23,9 @@ public class playerShip {
 
 	public void heal(int healAm){
 		health+= healAm;//heals the ship
+		if(health > 30){
+			health = 30;//no HP over 30
+		}//end if
 	}//end method
 
 	public void shoot(playerShip x, boolean isMissleWeapon, int damage){
